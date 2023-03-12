@@ -8,8 +8,9 @@ import org.springframework.stereotype.Component;
 public class InfoTable {
 
     public void createAndPrintComponents(ApplicationContext context) {
-        Car car = context.getBean("car", Car.class);
-        CarGarage carGarage = context.getBean("carGarage", CarGarage.class);
+        Car car = (Car) context.getBean("car");
+        CarGarage carGarage = (CarGarage) context.getBean("carGarage");
+
         System.out.println("\nAnnotation configuration: ");
         car.printComponentInfo();
         carGarage.printComponentInfo();

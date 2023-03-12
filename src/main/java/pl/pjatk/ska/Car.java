@@ -10,9 +10,11 @@ public class Car {
     private double priceForOneDay;
 
     public Car() {
+        System.out.println("autem jestem");
     }
 
     public Car(String make, String model, String vin, double priceForOneDay) {
+        super();
         this.make = make;
         this.model = model;
         this.vin = vin;
