@@ -1,14 +1,13 @@
 package pl.pjatk.ska;
 
-
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Component
 public class CarGarage {
     private Car car;
+
+    public CarGarage() {
+    }
 
     public CarGarage(Car car) {
         this.car = car;
@@ -23,6 +22,6 @@ public class CarGarage {
     }
 
     void printComponentInfo() {
-
+        System.out.println("CarGarage::printComponentInfo()");
     }
 }

@@ -51,6 +51,10 @@ public class Car {
         this.priceForOneDay = priceForOneDay;
     }
 
+    void printComponentInfo() {
+        System.out.println("Car::printComponentInfo()");
+    }
+
     @Override
     public String toString() {
         return "Car{" +
