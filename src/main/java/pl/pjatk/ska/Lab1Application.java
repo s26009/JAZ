@@ -9,10 +9,10 @@ import org.springframework.context.ApplicationContext;
 public class Lab1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Lab1Application.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(Lab1Application.class, args);
 
         InfoTable infoTable = new InfoTable();
-        infoTable.createAndPrintComponents();
+        infoTable.createAndPrintComponents(applicationContext);
     }
 
 }
