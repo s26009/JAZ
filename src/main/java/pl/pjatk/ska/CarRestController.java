@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/test")
-public class MyRestController {
+@RequestMapping("/car")
+public class CarRestController {
 
     @GetMapping("/someValue")
     ResponseEntity<String> someValue() {
@@ -26,7 +26,7 @@ public class MyRestController {
     }
 
     @PostMapping("/create")
-    ResponseEntity<Car> modelPost(@RequestBody String message) throws JSONException {
+    ResponseEntity<Car> create(@RequestBody String message) throws JSONException {
         String make = new JSONObject(message).getString("make");
         return ResponseEntity.ok(new Car(make, "Corolla", "2358704", 20.0));
     }
