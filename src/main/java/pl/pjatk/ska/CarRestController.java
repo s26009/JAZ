@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/car")
 public class CarRestController {
 
-    @GetMapping("/someValue")
-    ResponseEntity<String> someValue() {
-        return ResponseEntity.ok("someValue");
+    @GetMapping("/value/{value}")
+    ResponseEntity<String> value(@PathVariable String value) {
+        return ResponseEntity.ok(value);
     }
 
     @GetMapping("/model")
